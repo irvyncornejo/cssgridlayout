@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns:33% 33% 33%;
+    grid-template-rows: 300px 300px;
+    /* También se permite usar ambos para mertros en la misma línea
+        grid-template: filas / columnas;    
+    */
+
+    grid-template: 300px 100px 400px / 25% 60% 15% ;
+}
+
+.item{
+    background-color: #464545;
+    padding: 5px;
+    border: 1px solid black;
+}
+.item:nth-of-type(4){
+    background-color: aqua;
+    /*Scrool dentro de los elemntos que no podemos oberservar*/
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+}
+.item .item{
+    background-color: #ff1ef0;
+
+}
