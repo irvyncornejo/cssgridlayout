@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100vh;
+    grid-gap: 10px;
+
+}
+
+.item{
+    background-color: #464545;
+    padding: 5px;
+    border-radius: 5px;   
+}
+
+.item:nth-of-type(1){
+    background-color: #ff1ef0;
+    /* Podemos definir el inicio y final de nuestro grid */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.item:nth-of-type(8){
+    background-color: #1eecff;
+    /* Podemos definir el inicio y final de nuestro grid, si no sabemos 
+    la dimensión de inicio y fin pero sí la cantidad de espacios que deseamos que ocupen
+    usamos la propiedad de span */
+   /* grid-column: 1 / span 2; */
+   /* Si desconocemos la cantidad de columnas de nuestro layout pero queremos definir que use
+   todas las columnas disponibles usamos el -1*/
+   grid-column: 1 / -1;
+}
+.item:nth-of-type(7){
+    background-color: #1eecff;
+    grid-column: 2 / 4;
+}
+
+
+

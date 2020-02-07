@@ -10,12 +10,19 @@ body{
     */
 
     grid-template: 300px 100px 400px / 25% 60% 15% ;
+    /*Espaciado o margenes*/
+    column-gap: 5px;
+    row-gap: 15px;
+    /*Sintaxis resumida para grid gap | filas columnas*/
+    grid-gap: 10px 10px ;
 }
 
 .item{
     background-color: #464545;
     padding: 5px;
     border: 1px solid black;
+    /* Espaciado o margen */
+    
 }
 .item:nth-of-type(4){
     background-color: aqua;

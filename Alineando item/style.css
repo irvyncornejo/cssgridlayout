@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /*Contro de arriba y abajo
+    align-items: start end center stretch;*/ 
+    align-items: center;
+    /* Control de izquierda a derecha
+    justify-items:start end center stretch;*/
+    justify-items:center;
+
+
+}
+
+.item{
+    background-color: #464545;
+    padding: 5px;
+    border-radius: 5px;   
+}
+
+.item:nth-of-type(4){
+    /*Para la alineación de un elemento en particular es necesario colocar self*/
+    justify-self: end;
+}
+
+.item:nth-of-type(6){
+    justify-self: start;
+}
+
+
+

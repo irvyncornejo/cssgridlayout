@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: grid;
+
+    /*grid-template-columns:33% 33% 33%;
+    grid-template-rows: 300px 300px;*/
+    /* También se permite usar ambos para mertros en la misma línea
+        grid-template: filas / columnas;    
+    grid-template: 300px 100px 400px / 25% 60% 15% ;*/
+    
+    /* fracciones | fr*/
+    grid-template: 300px 200px 400px / 2fr 1fr 1fr;
+    /*Repleat
+    grid-template: 300px 200px 400px / repeat(4, 1fr);
+    */
+    /*Para mantener una cierta dimensión entre el contenido y el comportamiento responsive 
+    usamos la función minmax*/
+    grid-template: 300px 200px 400px / repeat(4, minmax(200px, 1fr));
+
+    /*También es posible deternimar minmax para un solo elemento */
+    grid-template: 300px 250px 450px / minmax(250px, 1fr) 2fr 1fr;
+    /*Espaciado o margenes*/
+    column-gap: 5px;
+    row-gap: 15px;
+    /*Sintaxis resumida para grid gap | filas columnas*/
+    grid-gap: 10px 10px ;
+}
+
+.item{
+    background-color: #464545;
+    padding: 5px;
+    border: 1px solid black;
+    /* Espaciado o margen */
+    
+}
+.item:nth-of-type(4){
+    background-color: aqua;
+    /*Scrooll dentro de los elementos que no podemos oberservar*/
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+}
+.item .item{
+    background-color: #ff1ef0;
+}

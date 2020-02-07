@@ -1,0 +1,46 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+.container{
+    display: grid;
+
+    grid-template: 100px 1fr 150px / 200px 1fr;
+    /*Sintaxis resumida para grid gap | filas columnas*/
+    grid-gap: 10px;
+    height: 100vh;
+    grid-template-areas: "header header" 
+                         " left contenido"
+                         "footer footer";
+}
+
+.item{
+    background-color: #464545;
+    padding: 5px;
+    border-radius: 5px;
+    /* Espaciado o margen */
+    
+}
+
+.item .item{
+    background-color: #ff1ef0;
+}
+
+.header{
+    grid-area: header;
+    background-color: #464545;
+}
+
+.left{
+    grid-area: left;
+    background-color: #ff1ef0;
+}
+
+.contenido{
+    grid-area: contenido;
+    background-color: #ffffff;
+}
+
+.footer{
+    grid-area: footer;
+}
